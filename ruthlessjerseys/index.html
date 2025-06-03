@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruthelss Jerseys</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    body {
+      background-color: #000000;
+      color: #e0e7ff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+    a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #60a5fa;
+    }
+    header {
+      background: #0a0a0a;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 2.8rem;
+      color: #3b82f6;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #3b82f6aa;
+    }
+    header img {
+      width: 80px; /* Adjust size as needed */
+      animation: bounce 2s infinite; /* Animation property */
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      box-shadow: inset 0 0 0 0 #3b82f6;
+      transition: all 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      box-shadow: inset 0 -2.7em 0 0 #3b82f6;
+      color: #000000;
+      outline: none;
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 90%;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 2.4rem;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+      color: #60a5fa;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 6px #3b82f6aa;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.8rem;
+    }
+    .product-card {
+      background: #111111;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+    }
+    .product-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background-color: #222222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a5b4fc;
+      font-weight: bold;
+      font-size: 1.1rem;
+      user-select: none;
+      text-shadow: 0 0 3px #3b82f6cc;
+    }
+    .product-info {
+      padding: 1rem 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: #a5b4fc;
+      text-shadow: 0 0 3px #3b82f6bb;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-top: auto;
+      text-shadow: 0 0 6px #3b82f6cc;
+    }
+    footer {
+      background: #0a0a0a;
+      color: #666c8e;
+      text-align: center;
+      padding: 1.3rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #222831;
+      margin-top: auto;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media(max-width: 600px){
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+      }
+      section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ruthelss Jerseys</h1>
+    <img src="https://drive.google.com/file/d/11RrRu2W4Y_eWGUxeEggnHPD12SKc0fpY/view?usp=sharing" alt="Logo Ruthelss Jerseys" />
+    <nav>
+      <a href="#football">Futebol Americano</a>
+      <a href="#basketball">Basquete</a>
+      <a href="#hockey">Hóquei de Gelo</a>
+      <a href="#baseball">Baseball</a>
+      <a href="#caps">Bonés</a>
+    </nav>
+  </header>
+  <main>
+    <section id="football">
+      <h2>Futebol Americano</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Futebol Americano Modelo 1" role="imgmd1ft.webp">Camisa #1</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Futebol Americano Modelo 1</div>
+            <div class="product-price">R$ 249,90</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Futebol Americano Modelo 2" role="imgmd2ft.webp">Camisa #2</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Futebol Americano Modelo 2</div>
+            <div class="product-price">R$ 279,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="basketball">
+      <h2>Basquete</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Basquete Modelo 1" role="imgmdbas1.jpg">Camisa #1</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Basquete Modelo 1</div>
+            <div class="product-price">R$ 219,90</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Basquete Modelo 2" role="imgbasmd2.webp">Camisa #2</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Basquete Modelo 2</div>
+            <div class="product-price">R$ 239,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="hockey">
+      <h2>Hóquei de Gelo</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Hóquei de Gelo Modelo 1" role="img1hc.png">Camisa #1</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Hóquei de Gelo Modelo 1</div>
+            <div class="product-price">R$ 269,90</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Hóquei de Gelo Modelo 2" role="imgmd2hc.png">Camisa #2</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Hóquei de Gelo Modelo 2</div>
+            <div class="product-price">R$ 299,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="baseball">
+      <h2>Baseball</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Baseball Modelo 1" role="imgmd1base.jpeg">Camisa #1</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Baseball Modelo 1</div>
+            <div class="product-price">R$ 229,90</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image" aria-label="Camisa Baseball Modelo 2" role="imgmdbase2.jpg">Camisa #2</div>
+          <div class="product-info">
+            <div class="product-name">Camisa Baseball Modelo 2</div>
+            <div class="product-price">R$ 259,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="caps">
+      <h2>Bonés</h2>
+      <div class="products">
+        <div class="product-card">
+          <div class="product-image" aria-label="Boné Modelo 1" role="imgmd1bone.jpeg">Boné #1</div>
+          <div class="product-info">
+            <div class="product-name">Boné Modelo 1</div>
+            <div class="product-price">R$ 79,90</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image" aria-label="Boné Modelo 2" role="imgmd2bone.jpg">Boné #2</div>
+          <div class="product-info">
+            <div class="product-name">Boné Modelo 2</div>
+            <div class="product-price">R$ 89,90</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Ruthelss Jerseys - Todos os direitos reservados.
+  </footer>
+</body>
+</html>
